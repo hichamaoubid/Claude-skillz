@@ -11,6 +11,11 @@ Mes skills Claude Code personnels.
 sop-creator, cro-optimization, strategic-planning, go-to-market-plan,
 pricing-strategist, prd-generator, product-hunt-launch-plan, marketing-ideas.
 
+`skills/watch` vient de [bradautomates/claude-video](https://github.com/bradautomates/claude-video)
+(© Bradley Bonanno, MIT, voir `LICENSE-claude-video`), v0.3.2, commit 03ceb42. Il a besoin de `ffmpeg` et `yt-dlp`.
+
+`config/CLAUDE.md` contient mes préférences de réponse, copiées dans `~/.claude/CLAUDE.md` au démarrage.
+
 ## Installation manuelle
 
 ```bash

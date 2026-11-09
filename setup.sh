@@ -7,5 +7,11 @@ for d in "$T"/cs/skills/*/; do rm -rf ~/.claude/skills/$(basename "$d"); cp -r "
 cp "$T/cs/config/CLAUDE.md" ~/.claude/CLAUDE.md
 command -v ffmpeg >/dev/null || { apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true; }
 command -v yt-dlp >/dev/null || pip install -q yt-dlp >/dev/null 2>&1 || true
+# Config /watch préremplie (sans clé) pour éviter l'assistant de premier lancement
+if [ ! -f ~/.config/watch/.env ]; then
+  mkdir -p ~/.config/watch
+  printf 'SETUP_COMPLETE=true\nWATCH_ENGINE=local\nWATCH_DETAIL=efficient\nWATCH_WHISPER_BACKEND=auto\n' > ~/.config/watch/.env
+  chmod 600 ~/.config/watch/.env
+fi
 rm -rf "$T"
 exit 0

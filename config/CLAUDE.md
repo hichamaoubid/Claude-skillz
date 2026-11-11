@@ -11,7 +11,7 @@ Dès qu'une demande correspond à un skill installé, l'invoquer avec l'outil Sk
 
 | Ma demande parle de... | Skill |
 |---|---|
-| une vidéo (lien YouTube, TikTok, Vimeo, fichier), "regarde / résume cette vidéo" | watch |
+| une vidéo (lien YouTube, TikTok, Vimeo, fichier), "regarde / résume cette vidéo" | watch (moteur Gemini) |
 | une landing page à améliorer, taux de conversion, inscriptions | cro-optimization |
 | mes prochaines priorités, croissance, "que faire ensuite", blocage business | strategic-planning |
 | lancer un produit, entrer sur un marché, stratégie go-to-market | go-to-market-plan |
@@ -22,3 +22,5 @@ Dès qu'une demande correspond à un skill installé, l'invoquer avec l'outil Sk
 | procédure, processus, onboarding, documentation d'équipe | sop-creator |
 
 Pour les autres plugins et skills installés (LinkedIn, ventes, finance, juridique, design...), même règle : choisir selon la description du skill.
+
+Vidéos : toujours passer par le skill watch avec le moteur Gemini (`--engine gemini`, ou `auto` quand GEMINI_API_KEY existe) pour que Google regarde la vidéo. Ne jamais essayer yt-dlp seul sur YouTube depuis le cloud : il est bloqué. Sans clé Gemini, le dire en une phrase et proposer de l'ajouter dans les réglages de l'environnement.

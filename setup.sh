@@ -10,7 +10,7 @@ command -v yt-dlp >/dev/null || pip install -q yt-dlp >/dev/null 2>&1 || true
 # Config /watch préremplie (sans clé) pour éviter l'assistant de premier lancement
 if [ ! -f ~/.config/watch/.env ]; then
   mkdir -p ~/.config/watch
-  printf 'SETUP_COMPLETE=true\nWATCH_ENGINE=local\nWATCH_DETAIL=efficient\nWATCH_WHISPER_BACKEND=auto\n' > ~/.config/watch/.env
+  printf 'SETUP_COMPLETE=true\nWATCH_ENGINE=auto\nWATCH_DETAIL=efficient\nWATCH_WHISPER_BACKEND=auto\n' > ~/.config/watch/.env
   chmod 600 ~/.config/watch/.env
 fi
 rm -rf "$T"
